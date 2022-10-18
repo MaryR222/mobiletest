@@ -62,7 +62,7 @@ Init view component config:
                     .build()
 ~~~
 ## Accessibility of Custom Card
-When the talback is activated the Custom Card elements will be described by blocks
+When the talkBack is activated the Custom Card elements will be described by blocks
 
 5 blocks have been defined
 
@@ -78,7 +78,7 @@ When the talback is activated the Custom Card elements will be described by bloc
 
 
 ## Accessibility of app List Custom Card
-When the talback is activated the app List CardAt the list level, it is indicated that a list of cards is being displayed and the last 4 digits of the card that is on the screen are indicated, in addition, it is indicated to slide to the right to know more information about the card.At the list level, it is indicated that a list of cards is being displayed and the last 4 digits of the card that is on the screen are indicated, in addition, it is indicated to slide to the right to know more information about the card.
+When the talkBack is activated the app List CardAt the list level, it is indicated that a list of cards is being displayed and the last 4 digits of the card that is on the screen are indicated, in addition, it is indicated to slide to the right to know more information about the card.At the list level, it is indicated that a list of cards is being displayed and the last 4 digits of the card that is on the screen are indicated, in addition, it is indicated to slide to the right to know more information about the card.
 
 
 ## How has the development been of List of Card App?
@@ -97,3 +97,9 @@ For the example of the use of the customCard, the font monserrat is defined
 
 ## User manual
 To implement the CustomCard package, add the module access implementation to the gradle where you need to use it.
+
+## Short Video
+
+
+https://user-images.githubusercontent.com/11575107/196488208-47227034-e795-4615-8f9e-7e15bbf9add0.mp4
+
