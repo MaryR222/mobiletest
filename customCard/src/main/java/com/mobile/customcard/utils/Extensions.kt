@@ -2,6 +2,7 @@ package com.mobile.customcard.utils
 
 import android.animation.ObjectAnimator
 import android.content.res.ColorStateList
+import android.graphics.Typeface
 import android.view.View
 import android.view.animation.DecelerateInterpolator
 import android.widget.ProgressBar
@@ -19,8 +20,8 @@ fun View.show(showed: Boolean = true) {
         this.visibility = View.GONE
 }
 
- fun Double.format(): String {
-  return  String.format("%.2f",this)
+fun Double.format(): String {
+    return String.format("%.2f", this)
 }
 
 fun ProgressBar.animProgress(from: Int = 0, to: Int) {
@@ -32,6 +33,7 @@ fun ProgressBar.animProgress(from: Int = 0, to: Int) {
         invalidate()
     }
 }
+
 fun CustomCardLayoutBinding.setStyle(style: CardStyle?) {
     style?.let {
         it.colors?.let { colors ->
@@ -41,8 +43,18 @@ fun CustomCardLayoutBinding.setStyle(style: CardStyle?) {
                 tvCreditMont.setTextColor(ContextCompat.getColor(root.context, titleColor))
                 tvCreditDebt.setTextColor(ContextCompat.getColor(root.context, titleColor))
                 typeCard.setTextColor(ContextCompat.getColor(root.context, titleColor))
-                tvCreditLastNumber.setTextColor(androidx.core.content.ContextCompat.getColor(root.context, titleColor))
-                tvCreditHolder.setTextColor(androidx.core.content.ContextCompat.getColor(root.context, titleColor))
+                tvCreditLastNumber.setTextColor(
+                    androidx.core.content.ContextCompat.getColor(
+                        root.context,
+                        titleColor
+                    )
+                )
+                tvCreditHolder.setTextColor(
+                    androidx.core.content.ContextCompat.getColor(
+                        root.context,
+                        titleColor
+                    )
+                )
                 stateCard.setTextColor(ContextCompat.getColor(root.context, titleColor))
 
                 tvCreditEnable.setTextColor(
@@ -86,6 +98,21 @@ fun CustomCardLayoutBinding.setStyle(style: CardStyle?) {
                     ContextCompat.getColor(root.context, R.color.lightGrey)
                 )
             }
+        }
+
+        it.fonts?.let { fonts ->
+            fonts.titles?.let { fontTitles ->
+                tvCredit.setTypeface(fontTitles, Typeface.BOLD)
+                typeCard.setTypeface(fontTitles, Typeface.BOLD)
+                tvCreditHolder.setTypeface(fontTitles, Typeface.BOLD)
+            }
+            fonts.others?.let { otherText ->
+                tvCreditDebt.setTypeface(otherText, Typeface.NORMAL)
+                tvCreditLastNumber.setTypeface(otherText, Typeface.NORMAL)
+                tvCreditLimit.setTypeface(otherText, Typeface.NORMAL)
+                tvCreditMont.setTypeface(otherText, Typeface.NORMAL)
+            }
+
         }
     }
 }

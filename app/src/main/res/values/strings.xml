@@ -1,3 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Mobile Test</string>
+    <string name="accessibility_description_list" tools:ignore="ExtraTranslation">En pantalla, el listado de  sus tarjeta, posición del listado %1$s. La Tarjeta seleccionada  termina  en %2$s. Para conocer mas información deslice hacia la derecha.</string>
 </resources>

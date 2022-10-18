@@ -2,12 +2,16 @@ package com.mobile.test.presentation.listCard
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.mobile.customcard.configView.ColorConfig
 import com.mobile.customcard.configView.CustomCardConfig
 import com.mobile.customcard.configView.CustomCardData
+import com.mobile.customcard.configView.FontConfig
+import com.mobile.test.R
 import com.mobile.test.databinding.ItemListCardBinding
 
 internal class ListCardAdapter(
@@ -25,18 +29,27 @@ internal class ListCardAdapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val card = getItem(position)
-        (holder as? ListCardViewHolder)?.bind(card, position)
+        (holder as? ListCardViewHolder)?.bind(card, position + 1)
     }
 
 
-   internal class ListCardViewHolder(private val binding: ItemListCardBinding) :
+    inner class ListCardViewHolder(private val binding: ItemListCardBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(cardEntity: CardEntity, position: Int) {
             binding.apply {
-                lContentItemCard.contentDescription = "Elemento del listado $position"
                 customCard
-                    .setConfig(CustomCardConfig(colors = ColorConfig()))
+                    .setConfig(
+                        CustomCardConfig(
+                            colors = ColorConfig(),
+                            fonts = FontConfig(
+                                titles = ResourcesCompat.getFont(
+                                    root.context,
+                                    R.font.test_mobile_font
+                                )
+                            )
+                        )
+                    )
                     .setData(
                         CustomCardData(
                             credit = cardEntity.creditLimit,
@@ -53,6 +66,12 @@ internal class ListCardAdapter(
                         )
                     )
                     .build()
+                lContentItemCard.contentDescription = root.context.getString(
+                    R.string.accessibility_description_list,
+                    position,
+                    cardEntity.lastNumber
+                )
+
             }
         }
     }

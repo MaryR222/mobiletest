@@ -4,6 +4,5 @@ import android.graphics.Typeface
 
 class FontConfig(
     var titles: Typeface? = null,
-    var textContents: Typeface? = null,
     var others: Typeface? = null
 )

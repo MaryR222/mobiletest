@@ -82,11 +82,11 @@ class CustomCard @JvmOverloads constructor(
     private fun loadView() {
         binding.apply {
             setStyle(style)
-            tvCardControl.show(showCardControl)
-            ivSettings.show(showCardControl)
+            clContentControl.show(showCardControl)
             ivDots.show(showMoreOptions)
             clContentCard.show(showImagenCard)
-            stateCard.show(cardActive)
+            clContenBottom.show(cardActive)
+            tvCreditLastNumber.show(showLastNumberCard)
 
             data?.let { data ->
 
@@ -107,7 +107,7 @@ class CustomCard @JvmOverloads constructor(
                     if (stateCard.isChecked) context.getString(R.string.accesibility_action_card_status) else context.getString(
                         R.string.accesibility_action_card_status_deactivated
                     )
-                clContenAll.contentDescription = context.getString(
+                clHeader.contentDescription = context.getString(
                     R.string.accessibility_description_header_custom_card,
                     data.typeCard,
                     data.lastNumberCard,

@@ -18,10 +18,9 @@
         android:layout_marginTop="@dimen/big_margin_12dp"
         android:accessibilityTraversalBefore="@id/clContentProgress"
         android:importantForAccessibility="yes"
-        android:screenReaderFocusable="false"
+        android:screenReaderFocusable="true"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:background="@color/white">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/typeCard"
@@ -321,6 +320,8 @@
                 android:importantForAccessibility="no"
                 android:text="@string/control_card"
                 android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/ivSettings"
                 app:layout_constraintTop_toTopOf="parent"
