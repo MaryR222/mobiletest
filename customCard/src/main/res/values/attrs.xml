@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomCard">
+        <attr name="coinType" format="string">
+            <enum name="Euro" value="0"/>
+            <enum name="Dolar" value="1"/>
+            <enum name="Libra" value="2"/>
+        </attr>
+        <attr name="showCardControl" format="boolean"/>
+        <attr name="showMoreOptions" format="boolean"/>
+        <attr name="showImagenCard" format="boolean"/>
+        <attr name="showLastNumberCard" format="boolean"/>
+        <attr name="cardActive" format="boolean"/>
+
+    </declare-styleable>
+
+    <attr name="backgroundColorProgress" format="reference" />
+
+</resources>
