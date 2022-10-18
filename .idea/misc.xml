@@ -3,7 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/layout/fragment_list_card.xml" value="0.37552083333333336" />
+        <entry key="customCard/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.32" />
+        <entry key="customCard/src/main/res/drawable/progressbar.xml" value="0.32" />
+        <entry key="customCard/src/main/res/drawable/temp_gen_card.xml" value="0.32" />
+        <entry key="customCard/src/main/res/drawable/toogle_buttom_drawable.xml" value="0.32" />
+        <entry key="customCard/src/main/res/drawable/toogle_buttom_selector_drawable.xml" value="0.32" />
+        <entry key="customCard/src/main/res/layout-v28/custom_card_layout.xml" value="0.19010416666666666" />
+        <entry key="customCard/src/main/res/layout/card_layout.xml" value="0.37552083333333336" />
         <entry key="customCard/src/main/res/layout/custom_card_layout.xml" value="0.37552083333333336" />
+        <entry key="customCard/src/main/res/layout/test_layout.xml" value="0.37552083333333336" />
       </map>
     </option>
   </component>

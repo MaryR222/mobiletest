@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="customCard">Card</string>
+    <string name="control_card">Control card</string>
+    <string name="card">Card</string>
+    <string name="credit_enable">Available</string>
+    <string name="credit_debt">Arranged</string>
+    <string name="limit_credit">Credit limit</string>
+    <string name="state_of_card">Card status</string>
+    <string name="accesibility_action_card_control" tools:ignore="ExtraTranslation">Option for card control, press twice</string>
+    <string name="accesibility_action_card_status" tools:ignore="ExtraTranslation">Activated</string>
+    <string name="accesibility_action_card_status_deactivated" tools:ignore="ExtraTranslation">Deactivated</string>
+    <string name="accessibility_description_header_custom_card">Card, %1$s  ending in  %2$s</string>
+    <string name="accessibility_description_progress_custom_card">Card limit, %1$f </string>
+    <string name="accessibility_description_status_custom_card">The card is, %1$s </string>
+
+</resources>

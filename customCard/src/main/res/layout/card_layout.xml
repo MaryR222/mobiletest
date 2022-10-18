@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="no"
+    android:background="@android:color/transparent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/temp_gen_card" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvPan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/big_margin_24dp"
+        android:layout_marginEnd="@dimen/big_margin_24dp"
+        android:ellipsize="marquee"
+        android:maxLength="20"
+        android:importantForAccessibility="no"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCardView"
+        app:layout_constraintEnd_toEndOf="@+id/ivCardView"
+        app:layout_constraintStart_toStartOf="@+id/ivCardView"
+        app:layout_constraintTop_toTopOf="@+id/ivCardView"
+        tools:text="**** **** **** 1234"
+        tools:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHolderType"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin_16dp"
+        android:layout_marginBottom="@dimen/medium_margin_8dp"
+        android:textColor="@color/white"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCardView"
+        app:layout_constraintEnd_toEndOf="@+id/tvPan"
+        app:layout_constraintStart_toStartOf="@+id/tvPan"
+        app:layout_constraintTop_toBottomOf="@+id/tvPan"
+        app:layout_constraintVertical_bias="0.07999998"
+        tools:text="Titular"
+        tools:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvClientName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/medium_margin_8dp"
+        android:textColor="@color/white"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@+id/ivCardView"
+        app:layout_constraintStart_toStartOf="@+id/tvHolderType"
+        app:layout_constraintTop_toBottomOf="@+id/tvHolderType"
+        tools:text="Mary Carmen Reza"
+        tools:textColor="@color/white" />
+</androidx.constraintlayout.widget.ConstraintLayout>
