@@ -4,7 +4,7 @@
 
 It has been made as a separate module thinking that it will be completely decoupled from any app
 
-A CustomCard component has been developed. The component allows configuration by XML parameters such as:
+A CustomCard component has been developed allows configuration by XML parameters such as:
 
 Set to CustomCard component in XML layout using diferents attributes:
 * "coinType": Select the type of modena that the amounts will have "EURO", "DOLAR" and "LIBRA by default the euro is selected" 
@@ -82,17 +82,17 @@ When the talkBack is activated the app List CardAt the list level, it is indicat
 
 
 ## How has the development been of List of Card App?
-The card list application has been developed, using a package structure that would simulate a layered architecture based on a clean architecture.
+* The card list application has been developed, using a package structure that would simulate a layered architecture based on a clean architecture.
 
-In this case we have the data layer, domain layer and presentation layer.
+* In this case we have the data layer, domain layer and presentation layer.
 
-Hilt has been used for injection dependencies
+* Hilt has been used for injection dependencies
 
-The data source does not come from any service.
+* The data source does not come from any service.
 
-No tests of any kind have been carried out.
+* No tests of any kind have been carried out.
 
-For the example of the use of the customCard, the font monserrat is defined
+* For the example of the use of the customCard, the font monserrat is defined
 
 
 ## User manual
