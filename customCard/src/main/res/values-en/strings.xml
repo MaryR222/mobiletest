@@ -10,8 +10,9 @@
     <string name="accesibility_action_card_control" tools:ignore="ExtraTranslation">Option for card control, press twice</string>
     <string name="accesibility_action_card_status" tools:ignore="ExtraTranslation">Activated</string>
     <string name="accesibility_action_card_status_deactivated" tools:ignore="ExtraTranslation">Deactivated</string>
-    <string name="accessibility_description_header_custom_card">Card, %1$s  ending in  %2$s</string>
-    <string name="accessibility_description_progress_custom_card">Card limit, %1$f </string>
+    <string name="accessibility_description_header_custom_card"> In screnn the card, %1$s  ending in  %2$s you are %3$s</string>
+    <string name="accessibility_description_progress_custom_card">Card limit, %1$s </string>
     <string name="accessibility_description_status_custom_card">The card is, %1$s </string>
+    <string name="accessibility_description_info_custom_card">Economic data of the card, amount drawn %1$s amount available %2$s</string>
 
 </resources>

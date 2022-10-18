@@ -6,12 +6,14 @@
     <string name="credit_enable">Disponible</string>
     <string name="credit_debt">Dispuesto</string>
     <string name="limit_credit">Límite de crédito</string>
-    <string name="state_of_card">Estado de la tarjeta</string>
-    <string name="accesibility_action_card_control">Opción para control de tarjeta, pulse dos veces</string>
+    <string name="state_of_card">Opción para activar o desactivar la tarjeta</string>
+    <string name="accesibility_action_card_control">Opción para control de tarjeta</string>
     <string name="accesibility_action_card_status" tools:ignore="ExtraTranslation">Activada</string>
     <string name="accesibility_action_card_status_deactivated" tools:ignore="ExtraTranslation">Desactivada</string>
-    <string name="accessibility_description_header_custom_card">Tarjeta, %1$s terminada en %2$s </string>
-    <string name="accessibility_description_progress_custom_card">Límite de la tarjeta, %1$f </string>
+    <string name="accessibility_description_header_custom_card">En pantalla la tarjeta, %1$s terminada en %2$s es usted %3$s</string>
+    <string name="accessibility_description_info_custom_card">Datos económicos de la tarjeta, monto dispuesto %1$s  monto disponible %2$s</string>
+
+    <string name="accessibility_description_progress_custom_card">Límite de la tarjeta, %1$s </string>
     <string name="accessibility_description_status_custom_card">La tarjeta esta, %1$s </string>
 
 </resources>

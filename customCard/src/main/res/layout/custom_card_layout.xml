@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clContenAll"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/small_margin_4dp"
@@ -15,9 +16,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin_10dp"
         android:layout_marginTop="@dimen/big_margin_12dp"
-        android:layout_marginEnd="@dimen/medium_margin_10dp"
         android:accessibilityTraversalBefore="@id/clContentProgress"
         android:importantForAccessibility="yes"
+        android:screenReaderFocusable="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:background="@color/white">
@@ -50,12 +51,54 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin_8dp"
+            android:ellipsize="end"
             android:importantForAccessibility="no"
             android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvCreditLastNumber"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/typeCard"
             tools:text="CRÉDITO"
             tools:textColor="@color/blue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCreditLastNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin_4dp"
+            android:layout_marginTop="@dimen/medium_margin_8dp"
+            android:importantForAccessibility="no"
+            android:textSize="12sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCredit"
+            app:layout_constraintTop_toBottomOf="@+id/typeCard"
+            tools:text="11111"
+            tools:textColor="@color/blue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCreditHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin_4dp"
+            android:background="@drawable/label_shape"
+            android:gravity="center"
+            android:importantForAccessibility="no"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCreditLastNumber"
+            app:layout_constraintStart_toEndOf="@+id/tvCreditLastNumber"
+            app:layout_constraintTop_toTopOf="@+id/tvCreditLastNumber"
+            tools:text="TITULAR"
+            tools:textColor="@color/blue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -87,8 +130,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin_10dp"
         android:layout_marginEnd="@dimen/medium_margin_10dp"
-        android:accessibilityTraversalBefore="@id/clContenBottom"
+        android:accessibilityTraversalBefore="@id/clInfoEconomy"
         android:importantForAccessibility="yes"
+        android:screenReaderFocusable="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/clContentCard">
 
@@ -109,10 +153,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/medium_margin_8dp"
+            android:gravity="end"
             android:importantForAccessibility="no"
             android:textAlignment="textEnd"
             android:textSize="14sp"
-            android:gravity="end"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tvCreditLimit"
             app:layout_constraintTop_toTopOf="parent"
@@ -125,11 +169,24 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:importantForAccessibility="no"
+            android:max="100"
             android:progressDrawable="@drawable/progressbar"
             android:progressTint="@color/yellow"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvCreditLimit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clInfoEconomy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_margin_10dp"
+        android:layout_marginEnd="@dimen/medium_margin_10dp"
+        android:accessibilityTraversalBefore="@id/clContenBottom"
+        android:importantForAccessibility="yes"
+        android:screenReaderFocusable="true"
+        app:layout_constraintTop_toBottomOf="@+id/clContentProgress">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/circleShapeDebt"
@@ -139,8 +196,7 @@
             android:importantForAccessibility="no"
             android:src="@drawable/circle_shape"
             app:layout_constraintBottom_toBottomOf="@+id/tvCreditDebt"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progress" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tvCreditDebt"
@@ -151,8 +207,8 @@
             android:importantForAccessibility="no"
             android:text="@string/credit_debt"
             android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toEndOf="@+id/circleShapeDebt"
-            app:layout_constraintTop_toBottomOf="@+id/progress"
             tools:text="Dispuesto" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -190,8 +246,8 @@
             android:text="@string/credit_enable"
             android:textAlignment="textEnd"
             android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/progress"
             tools:text="Disponible" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -208,8 +264,6 @@
             app:layout_constraintTop_toBottomOf="@+id/tvCreditEnable"
             tools:text="1.000.222"
             tools:textColor="@color/blue" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -219,18 +273,18 @@
         android:layout_marginTop="@dimen/medium_margin_10dp"
         android:background="@color/lightGrey"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clContentProgress">
+        app:layout_constraintTop_toBottomOf="@+id/clInfoEconomy">
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/stateCard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
+            android:contentDescription="@string/state_of_card"
             android:padding="@dimen/medium_margin_10dp"
             android:text="@string/card"
-            android:theme="@style/Theme.CustomCard"
             android:textColor="@color/blue"
-            android:contentDescription="@string/state_of_card"
+            android:theme="@style/Theme.CustomCard"
             android:thumb="@drawable/toogle_buttom_drawable"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -238,14 +292,13 @@
             app:track="@drawable/toogle_buttom_selector_drawable" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="0dp"
             android:id="@+id/clContentControl"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:importantForAccessibility="yes"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/view"
-            android:importantForAccessibility="yes"
-            android:accessibilityTraversalAfter="@id/stateCard"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -253,9 +306,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/medium_margin_10dp"
-                android:src="@drawable/settings"
-                android:padding="@dimen/icon_padding"
                 android:importantForAccessibility="no"
+                android:padding="@dimen/icon_padding"
+                android:src="@drawable/settings"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -265,9 +318,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:gravity="center"
+                android:importantForAccessibility="no"
                 android:text="@string/control_card"
                 android:textStyle="bold"
-                android:importantForAccessibility="no"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/ivSettings"
                 app:layout_constraintTop_toTopOf="parent"

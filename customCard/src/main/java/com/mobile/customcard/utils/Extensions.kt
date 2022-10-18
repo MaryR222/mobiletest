@@ -1,7 +1,10 @@
 package com.mobile.customcard.utils
 
+import android.animation.ObjectAnimator
 import android.content.res.ColorStateList
 import android.view.View
+import android.view.animation.DecelerateInterpolator
+import android.widget.ProgressBar
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import com.mobile.customcard.R
@@ -16,6 +19,19 @@ fun View.show(showed: Boolean = true) {
         this.visibility = View.GONE
 }
 
+ fun Double.format(): String {
+  return  String.format("%.2f",this)
+}
+
+fun ProgressBar.animProgress(from: Int = 0, to: Int) {
+    if (to >= 0) {
+        val animator = ObjectAnimator.ofInt(this, "progress", from, to)
+        animator.duration = 1000
+        animator.interpolator = DecelerateInterpolator()
+        animator.start()
+        invalidate()
+    }
+}
 fun CustomCardLayoutBinding.setStyle(style: CardStyle?) {
     style?.let {
         it.colors?.let { colors ->
@@ -25,6 +41,8 @@ fun CustomCardLayoutBinding.setStyle(style: CardStyle?) {
                 tvCreditMont.setTextColor(ContextCompat.getColor(root.context, titleColor))
                 tvCreditDebt.setTextColor(ContextCompat.getColor(root.context, titleColor))
                 typeCard.setTextColor(ContextCompat.getColor(root.context, titleColor))
+                tvCreditLastNumber.setTextColor(androidx.core.content.ContextCompat.getColor(root.context, titleColor))
+                tvCreditHolder.setTextColor(androidx.core.content.ContextCompat.getColor(root.context, titleColor))
                 stateCard.setTextColor(ContextCompat.getColor(root.context, titleColor))
 
                 tvCreditEnable.setTextColor(

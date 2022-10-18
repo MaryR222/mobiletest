@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lContentItemCard"
+    android:importantForAccessibility= "no"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.mobile.customcard.CustomCard
+        android:id="@+id/customCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showCardControl="true"
+        app:showLastNumberCard="true"
+        app:showMoreOptions="true"
+        app:showImagenCard="true"
+        app:coinType="Dolar"
+        app:cardActive="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
